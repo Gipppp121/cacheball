@@ -6,7 +6,7 @@
   <a href="https://gipppp121.github.io/cacheball/"><img src="https://img.shields.io/badge/%E2%96%B6%20play-in%20browser-5fe3f0?style=flat-square" alt="play in browser"></a>
   <img src="https://img.shields.io/badge/runs%20on-any%20web%20page-5fe3f0?style=flat-square" alt="runs on any web page">
   <img src="https://img.shields.io/badge/deps-none-0b0f15?style=flat-square" alt="no dependencies">
-  <img src="https://img.shields.io/badge/size-12%20KB-1f6fd0?style=flat-square" alt="12 KB">
+  <img src="https://img.shields.io/badge/size-23%20KB-1f6fd0?style=flat-square" alt="23 KB">
   <img src="https://img.shields.io/badge/models-sonnet%205.5%20%C2%B7%20opus%205.5-c8a6ff?style=flat-square" alt="models">
   <img src="https://img.shields.io/badge/license-MIT-7d8794?style=flat-square" alt="MIT">
 </p>
@@ -37,10 +37,41 @@ On any other page, this README included, and paste `cacheball.js` into the brows
 |---|---|
 | mouse, touch | roll toward the pointer |
 | arrows, WASD | roll |
+| `Enter` | hand off early and see your result |
+| `R` | roll again from the result card |
+| `C` | copy your result |
 | `M` | mute |
 | `Esc` | quit and put every word back |
 
 Small words first. Big headings and images stay put until the ball is big enough to take them. Stop for 5 seconds and the cache goes cold: the next pickup pays a cache miss.
+
+## Missions and the ending
+
+Eight missions run while you roll:
+
+| # | mission |
+|---|---|
+| 1 | roll up 25 words |
+| 2 | catch a lucky word: opus, sonnet, cache, turn, handoff |
+| 3 | hit a x10 combo |
+| 4 | grow the cache to the first size goal |
+| 5 | swallow a heading or an image |
+| 6 | keep the cache warm for 20 seconds |
+| 7 | grow the cache to the second size goal |
+| 8 | clear the page |
+
+The two size goals scale with the page you play on, so a short README and a long docs page are both winnable.
+
+Clear 97% of the page and the last words fly into the ball on their own. The ball collapses into a 20K `handoff.md`, and a result card shows words, time, context, cache misses, how far opus / sonnet dropped, and a rank:
+
+| rank | what it takes |
+|---|---|
+| S | page cleared, all 8 missions, zero cache misses |
+| A | page cleared, at least 7 missions |
+| B | at least 5 missions |
+| C | anything else |
+
+Press `Enter` at any point to hand off early. `R` rolls again, `C` copies a one-line result you can paste anywhere.
 
 Nothing leaves the page. The script only hides the words it picked up and shows them again on `Esc`.
 
