@@ -31,7 +31,7 @@ table.files td.n{color:#e6edf3}table.files td.t{text-align:right;white-space:now
 .md p{margin:10px 0}
 </style>
 <style>:root{color-scheme:dark}html,body{background:#0d1117}.wrap{margin:0 auto;padding-inline:16px}@media(max-width:820px){.wrap{flex-direction:column}.side{width:auto}}
-#roll{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:2147483647;font:600 15px ui-monospace,Menlo,monospace;background:#1f6fd0;color:#fff;border:1px solid #5fe3f0;border-radius:24px;padding:12px 20px;cursor:pointer;box-shadow:0 6px 24px rgba(31,111,208,.5)}
+#rollx{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:2147483647;font:600 15px ui-monospace,Menlo,monospace;background:#1f6fd0;color:#fff;border:1px solid #5fe3f0;border-radius:24px;padding:12px 20px;cursor:pointer;box-shadow:0 6px 24px rgba(31,111,208,.5)}
 #roll:focus-visible{outline:2px solid #5fe3f0;outline-offset:3px}.md{padding:24px 16px}</style>
 </head>
 <body>
@@ -62,9 +62,17 @@ one cache miss at 150K         -> $0.38 Sonnet / $0.75 Opus</pre>
 </div></div></div><div class="side"><h3>About</h3><p>Roll your agent's context up any web page. Watch Opus 5.5 go from 2x to 1.26x the price of Sonnet 5.5.</p>
 <span class="tag">agents</span><span class="tag">prompt-caching</span><span class="tag">claude</span><span class="tag">bookmarklet</span><span class="tag">katamari</span>
 <p style="margin-top:16px">★ 0 stars · 1 watching · 0 forks</p><h3 style="margin-top:22px">Languages</h3><p>JavaScript 78.4% · Python 21.6%</p></div></div>
-<button id="roll" type="button">roll this page ▸</button>
+<div id="gate" style="position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;background:rgba(5,8,12,.72);backdrop-filter:blur(2px);padding:16px">
+<div style="max-width:520px;width:100%;background:#0b1118;border:1px solid #1f6fd0;border-radius:16px;padding:28px 26px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.6)">
+<div style="width:84px;height:84px;margin:0 auto 14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#5fe3f0 22%,#1f6fd0 62%,#0a1730)"></div>
+<div style="font:800 40px ui-monospace,Menlo,monospace;color:#e8ecf1">cache<span style="color:#5fe3f0">ball</span></div>
+<p style="color:#b9c2cc;margin:10px 0 4px">Roll your agent's context up this page.<br>Every word you pick up grows the ball.</p>
+<p style="color:#5fe3f0;margin:4px 0 18px;font:600 14px ui-monospace,Menlo,monospace">watch opus / sonnet drop from 1.9x toward 1.26x</p>
+<button id="roll" type="button" style="font:700 18px ui-monospace,Menlo,monospace;background:#1f6fd0;color:#fff;border:1px solid #5fe3f0;border-radius:28px;padding:14px 34px;cursor:pointer">▶ play</button>
+<p style="color:#7d8794;font:13px ui-monospace,Menlo,monospace;margin:16px 0 0">mouse or touch to roll · arrows / WASD · M mute · Esc quit</p>
+</div></div>
 <script>
-document.getElementById('roll').onclick=function(){this.hidden=true;window.CACHEBALL_OPTS={start:{x:scrollX+innerWidth*.3,y:scrollY+innerHeight*.5}};
+document.getElementById('roll').onclick=function(){document.getElementById('gate').remove();window.CACHEBALL_OPTS={start:{x:scrollX+innerWidth*.3,y:scrollY+innerHeight*.5}};
 /* cacheball.js - roll your agent's context up any web page.
    Paste into the console, load as a bookmarklet, or include with <script>.
    Esc quits and puts every word back. Arrows / WASD / mouse to roll. M mutes. */
