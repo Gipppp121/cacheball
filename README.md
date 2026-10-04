@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <a href="https://gipppp121.github.io/cacheball/"><img src="https://img.shields.io/badge/%E2%96%B6%20play-in%20browser-5fe3f0?style=flat-square" alt="play in browser"></a>
   <img src="https://img.shields.io/badge/runs%20on-any%20web%20page-5fe3f0?style=flat-square" alt="runs on any web page">
   <img src="https://img.shields.io/badge/deps-none-0b0f15?style=flat-square" alt="no dependencies">
   <img src="https://img.shields.io/badge/size-12%20KB-1f6fd0?style=flat-square" alt="12 KB">
@@ -11,6 +12,8 @@
 </p>
 
 # cacheball
+
+**[Play it in your browser](https://gipppp121.github.io/cacheball/)**
 
 Roll your agent's context up any web page. Every word you pick up grows the ball, and the ball is what the next turn re-reads from cache.
 
@@ -26,7 +29,9 @@ The counter in the corner shows that ratio live while you roll.
 
 ## Run it
 
-Open any page, this README included, and paste `cacheball.js` into the browser console. Or save `bookmarklet.txt` as a bookmark and click it on any page.
+Fastest way: open the [play page](https://gipppp121.github.io/cacheball/) and press **roll this page**.
+
+On any other page, this README included, and paste `cacheball.js` into the browser console. Or save `bookmarklet.txt` as a bookmark and click it on any page.
 
 | input | what it does |
 |---|---|
