@@ -1,0 +1,3 @@
+*.html linguist-documentation
+*.min.js linguist-generated
+bookmarklet.txt linguist-generated
